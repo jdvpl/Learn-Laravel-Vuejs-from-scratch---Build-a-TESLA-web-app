@@ -62,3 +62,10 @@ php artisan migrate
 `
 php artisan make:controller TodoController -r
 `
+
+### instalando fontawesome
+`
+npm i --save @fortawesome/fontawesome-svg-core
+npm i --save @fortawesome/free-solid-svg-icons
+npm i --save @fortawesome/vue-fontawesome@latest
+`

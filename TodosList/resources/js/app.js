@@ -1,4 +1,11 @@
 import App from './components/App';
+import Vue from 'vue';
+import {library} from '@fortawesome/fontawesome-svg-core';
+import {faPlus} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/vue-fontawesome';
+
+library.add(faPlus);
+Vue.component('font-awesome-icon',FontAwesomeIcon);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
