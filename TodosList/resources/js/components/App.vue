@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1 style="color:darkgrey;font-weight:bold;margin-top:200px;text-align:center">Todo List</h1>
+        <h1 style="color:darkgrey;font-weight:bold;margin-top:120px;text-align:center">Todo List</h1>
         <div class="todoListContainer">
             <add-item-form/>
             <list-view />
