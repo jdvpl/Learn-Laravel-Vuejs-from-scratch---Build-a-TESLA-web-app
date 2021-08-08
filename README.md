@@ -69,3 +69,9 @@ npm i --save @fortawesome/fontawesome-svg-core
 npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/vue-fontawesome@latest
 `
+
+### instalando axios
+
+`
+npm -i --save axios
+`
