@@ -45,3 +45,20 @@ npm i vue-loader --save-dev --legacy-peer-deps
 `
 npm run watch
 `
+
+### crear modelo
+`
+php artisan make:model Todo -m
+`
+
+### migrar a la base de datos el modelo creado
+
+`
+php artisan migrate
+`
+
+### crear controlador
+
+`
+php artisan make:controller TodoController -r
+`
