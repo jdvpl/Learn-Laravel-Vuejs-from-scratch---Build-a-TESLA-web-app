@@ -3,6 +3,7 @@
             <div v-for="(item, index) in items" :key="index">
         <list-item
             :item="item"
+            v-on:reloadTodos="getTodos()"
             class="item"
         />
     </div>

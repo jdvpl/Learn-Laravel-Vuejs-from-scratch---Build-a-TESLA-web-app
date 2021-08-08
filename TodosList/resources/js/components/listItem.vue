@@ -1,11 +1,11 @@
 <template>
     <div class="item">
-        <input type="checkbox" name="" id="" v-model="item.completado">
-        <span :class="['itemText', item.completado ?'completado':'']">{{ item.todo }}</span>
+        <input type="checkbox" name="" id="" @change="updateTodo()" v-model="item.completado">
+        <span :class="['itemText', item.completado ?'completado':'']">{{ item.todo }} </span>
         <button class="edit">
             <font-awesome-icon icon="edit"/>
         </button>
-        <button class="delete">
+        <button class="delete" @click="removeTodo()">
             <font-awesome-icon icon="trash"/>
         </button>
     </div>
@@ -13,7 +13,29 @@
 
 <script>
 export default {
-    props:['item']
+    props:['item'],
+    methods:{
+        updateTodo() {
+            axios.post('api/todo/update/'+this.item.id,{
+                completado:this.item.completado
+            }).then(response => {
+                if (response.status>=200 && response.status < 300) {
+                    alert('Se ha completado la tarea ')
+                                        this.$emit('reloadTodos')
+
+                }
+            })
+        },
+        removeTodo(){
+            axios.get('api/todo/delete/'+this.item.id).then(response => {
+                if (response.status >=200 && response.status < 300){
+                    alert('Se ha eliminado la tarea ')
+                    this.$emit('reloadTodos')
+
+                }
+            })
+        }
+    }
 }
 </script>
 
